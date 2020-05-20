@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"os"
 	"regexp"
-	"strings"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
@@ -18,7 +17,7 @@ import (
 
 var (
 	ServiceName = "user-service"
-	Version     = "0.0.1"
+	Version     = "2"
 )
 
 func main() {
@@ -72,8 +71,7 @@ func main() {
 }
 
 func getURL() string {
-	s := strings.Split(Version, ".")
-	return fmt.Sprintf("/api/v%s%s%s", s[0], s[1], s[2])
+	return fmt.Sprintf("/api/v%s/users", Version)
 }
 
 type Service struct {
