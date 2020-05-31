@@ -1,7 +1,7 @@
 {
     "DBContext": {
         "Shema": "postgres",
-        "User": "mari",
+        "User": "postgres",
         "Password": "postgres",
         "Host": "127.0.0.1",
         "Port": "5432"
